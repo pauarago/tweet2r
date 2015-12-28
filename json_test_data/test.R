@@ -1,11 +1,4 @@
-install.packages("/home/sanipau/Documents/Dropbox/pau-treballant/tweet2R/tweet2r", repos = NULL, type="source")
-setwd("~/home/sanipau/Documents/Dropbox/pau-treballant/tweet2R/json_test_data")
-library(RSQLite)
-library(rgdal)
-library(plyr)
-library(ggplot2)
-library(ggmap)
-#empezamos con el test
+install.packages("tweet2r") 
 library(tweet2r)
 
 #definition of the start time and end time
