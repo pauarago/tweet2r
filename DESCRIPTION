@@ -1,0 +1,18 @@
+Package: tweet2r
+Version: 0.3
+Date: 2015-12-28
+Title: Twitter Collector and Export to 'postGIS'
+Description: This is an improved implementation of the package 'StreamR' to
+    capture tweets and store it into a SQLite and 'postGIS' data base. The package simplifies
+    the configuration task to capture tweets and facilitates its store into a
+    'PostGIS' database. Also exports tweets to GIS format
+Author: Pau Aragó
+Depends: R (>= 3.2), 
+Imports: ROAuth, streamR, RPostgreSQL, rgdal, sp, RSQLite, ggmap, ggplot2, plyr
+Maintainer: Pau Aragó <parago@uji.es>
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 5.0.0
+NeedsCompilation: no
+Repository: CRAN
+
