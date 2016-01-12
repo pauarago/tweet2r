@@ -57,7 +57,7 @@ t2sqlite<-function(fileprefix, import=TRUE){
   #close connection with sqlite
   dbDisconnect(con)
   
-  message("Database created in your working directory and tweets imported as a data frame.")
+  message(paste("Database created in ", getwd(),  "and tweets imported as a data frame.", sep=" ")) 
     
   return(tweets)
 }

@@ -1,6 +1,6 @@
 \name{tweet2r}
 \alias{tweet2r}
-\title{ Set up parameters to file streaming and store it in a JSON file using Twitter Streaming API .}
+\title{ Set up parameters to file streaming and store tweets in a JSON file using Twitter Streaming API .}
 
 \description{Configuration of the start stop for retrieving tweets, also set up the search by bounding box or by key words, number of tweets retrieved (stored in a collection of JSON files) and set up of the file prefix to store the JSON files created during the connection to the to Twitter Streaming API.\code{tweet2r} Don't opens a connection to Twitter's Streaming API by himself but you can configure the tweeter connection as is described in \link{streamR} that will return public statuses that match your keywords or bounding box definition. It is very useful to set up start time and end time of the connection. Note that the end time will be delayed depending on the time needed to close the file for the number of tweets set up.
 }

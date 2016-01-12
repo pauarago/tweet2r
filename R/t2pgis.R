@@ -53,7 +53,9 @@ t2pgis<-function(fileprefix, con){
   #close connection with postgres
   postgresqlCloseConnection(con)
   
-  return(message("tweets exported to postGIS"))
+  message(paste("tweets exported to postGIS as", fileprefix ,"tablen name", sep=" "))
+  
+  return()
 }
 
 

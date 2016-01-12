@@ -9,11 +9,7 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
                   authURL="https://api.twitter.com/oauth/authorize"){
  
 
-   #load requiret packages
-#    library(ROAuth)
-#    library(streamR)
 
-  
    #------building variables with imputs
   
   #start time
@@ -151,8 +147,9 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
     }
   }
   
+  
   endtime<-paste("end time",Sys.time())
-  message(paste(starttime , endtime, sep=" "))
+  message(paste(starttime , endtime, "JSON files stored in", getwd(), sep=" "))
   
   return(message("end of tweets streaming"))
 }
