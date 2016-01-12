@@ -28,21 +28,35 @@ con <- dbConnect(SQLite(), dbname)
   switch(export,
          #case export as shp
          shp={
-           writeOGR(eval(parse(text=geotable)), "." , "geotable", driver="ESRI Shapefile")
+<<<<<<< HEAD
+           writeOGR(eval(parse(text=geotable)), "." , geotable, driver="ESRI Shapefile")
            
            msg2=paste("exported file as ", geotable, ".shp in folder", getwd(), sep="" )
+=======
+           writeOGR(eval(parse(text=geotable)), "." , "geotable", driver="ESRI Shapefile")
+           
+           msg2=paste("exported file as ", geotable, ".shp", ,"infolder", getwd(), sep="" )
+>>>>>>> 83a8854085371685fe41789cf47f5838072391c0
          },
          #case export as a gml
          gml={
            writeOGR(eval(parse(text=geotable)),paste(geotable, ".gml", sep="") ,"geotable", driver="GML")
            
+<<<<<<< HEAD
            msg2=paste("exported fils as ", geotable, ".gml in folder", getwd(), sep="" )
+=======
+           msg2=paste("exported fils as ", geotable, ".gml","infolder", getwd(), sep="" )
+>>>>>>> 83a8854085371685fe41789cf47f5838072391c0
          },
          #case export as a kml
          kml={
            writeOGR(eval(parse(text=geotable)),paste(geotable, ".kml", sep="") ,"geotable", driver="KML")
            
+<<<<<<< HEAD
            msg2=paste("exported file as ", geotable, ".kml in folder", getwd(), sep="" )
+=======
+           msg2=paste("exported file as ", geotable, ".kml", ,"infolder", getwd(), sep="" )
+>>>>>>> 83a8854085371685fe41789cf47f5838072391c0
          },
          no={
            msg2="no exported file"
