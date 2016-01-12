@@ -10,8 +10,11 @@
 	* src/t2sqlite: message with output folder
 	* src/t2gis: message with output folder
 	* src/tweet2r: message where JSON files are stored
+<<<<<<< HEAD
 
 2016-01-12 19:00  parago
 
 	* src/t2gis: bug error
 
+=======
+>>>>>>> 83a8854085371685fe41789cf47f5838072391c0
