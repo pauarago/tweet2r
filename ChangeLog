@@ -4,3 +4,9 @@
 	* src/t2gis: new function
 	* src/valjson: new function
 	* src/t2summary: new function
+
+2016-01-12 16:00  parago
+
+	* src/t2sqlite: message with output folder
+	* src/t2gis: message with output folder
+	* src/tweet2r: message where JSON files are stored
