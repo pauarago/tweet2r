@@ -40,7 +40,7 @@ t2sqlite<-function(fileprefix, import=TRUE){
                 ALTER TABLE ", fileprefix, " rename t_trans TO created_at;"))
   
   
-  #create view with only with tweets with only geolocated tweets
+  #create view only with tweets with only geolocated tweets
   dbSendQuery(con,
               paste("CREATE TABLE geo",fileprefix," AS
                   SELECT * 

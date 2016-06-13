@@ -23,7 +23,7 @@ con <- dbConnect(SQLite(), dbname)
                                                 proj4string=CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")))
          
          #write output message
-         message(paste("Imported files as", geotable, "SpatialPointDataFrame", sep=" "))
+         message(paste("Imported tweets as as SpatialPointDataFrame", sep=" "))
 
   switch(export,
          #case export as shp

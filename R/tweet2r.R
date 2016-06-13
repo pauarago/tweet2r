@@ -1,9 +1,9 @@
 #' @export
 #' @import ROAuth streamR
 
-tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix, 
-                  consumerKey="rXu02gEtPnzH81cxDRKUnhNia",
-                  consumerSecret="0Ean4ymoxmB4OWt9a6RgNP0Kap0CbRL1lFBO7QPDiGoP5v8d8j",
+tweet2r<-function(t_start,t_end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix, 
+                  consumerKey="0nr4dr2Wryblj7LrnHRCDR8ZB",
+                  consumerSecret="H43loxZbyzt2V0okwio14IhyX2UVwXQvfMfcZ1AKNyqf87qeQh",
                   requestURL="https://api.twitter.com/oauth/request_token",
                   accessURL="https://api.twitter.com/oauth/access_token",
                   authURL="https://api.twitter.com/oauth/authorize"){
@@ -13,12 +13,12 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
    #------building variables with imputs
   
   #start time
-  start<-paste(start, "CET", sep=" ")
-  start<-strptime(start,"%Y-%m-%d %H:%M:%S")
+  t_start<-paste(t_start, "CET", sep=" ")
+  t_start<-strptime(t_start,"%Y-%m-%d %H:%M:%S")
   
   #stop time
-  end<-paste(end, "CET", sep=" ")
-  end<-strptime(end,"%Y-%m-%d %H:%M:%S")
+  t_end<-paste(t_end, "CET", sep=" ")
+  t_end<-strptime(t_end,"%Y-%m-%d %H:%M:%S")
   
   #-----checking input errors 
   
@@ -26,19 +26,19 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
   error=FALSE
   
   #check start and end format
-  if (is.na(start)==TRUE){
+  if (is.na(t_start)==TRUE){
    error=TRUE
    warning("Error:Invalid end time format")
   }
-  if(is.na(start)==TRUE){
+  if(is.na(t_start)==TRUE){
     error=TRUE
-    warning("Error:Invalid start time format")
+    warning("Error:Invalid t_start time format")
   }
   
   #check start time minor than end time
-  if(is.na(start<end)==TRUE){
+  if(is.na(t_start<t_end)==TRUE){
     error=TRUE
-    warning("Error:start time stamp should be minor than end time stamp ")
+    warning("Error:t_start time stamp should be minor than t_end time stamp ")
   }
   
   #if number of tweets is null the put 3000 by defoult
@@ -76,10 +76,10 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
   #------------defin the start tiem and the end time to get the tweets------
   
   #define start time
-  start<-strptime(paste(start,"CET"),"%Y-%m-%d %H:%M:%S")
+  t_start<-strptime(paste(t_start,"CET"),"%Y-%m-%d %H:%M:%S")
   
   #define end time for the loop
-  end<-as.list(strptime(paste(end,"CET"),"%Y-%m-%d %H:%M:%S"))
+  t_end<-as.list(strptime(paste(t_end,"CET"),"%Y-%m-%d %H:%M:%S"))
   
   
   #get current time as a list
@@ -88,7 +88,7 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
   #-----------keep system waiting until the start time--------
   
   #keep waiting until the start time
-  while (current<start){
+  while (current<t_start){
     current<-as.list(Sys.time())
   }
   
@@ -105,7 +105,7 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
     #loop to capturing tweets
     #counter initialization
     x<-0
-    while (current<end)
+    while (current<t_end)
     {
       #definition of the file name
       #paste is useful to concatenate strings, 
@@ -129,7 +129,7 @@ tweet2r<-function(start,end, ntweets=NULL,keywords=NULL, bbox=NULL, fileprefix,
     #counter initialization
     x<-0
 
-    while (current<end)
+    while (current<t_end)
     {
       #definition of the file name
       #paste is useful to concatenate strings, 
