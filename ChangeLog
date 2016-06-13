@@ -15,3 +15,12 @@
 
 	* src/t2gis: bug error
 
+2016-06-13 19:00  parago
+        
+	* src/t2STIDF: new function
+	* src/tglm: new function
+	* src/tspan: new function
+	* src/theatmap: new function
+	* src/t2SpatialPointDataFrame: new function
+	* src/t2DataFrame: new function
+	* src/t2subset: new function
