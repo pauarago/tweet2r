@@ -15,7 +15,7 @@ theatmap(geotweets, vpoints=FALSE)
   \item{vpoints}{By default FALSE. TRUE option will plot tweets points over the density map.}
 }
 \details{
-This funtion is base on \code{\link{ggmap}}. It is a fast way to plot a density map, actually it can work with any SpatialPointsDataFrame. To customize your output, more information is available in the \code{\link{ggmap}} documentation page \url{https://cran.r-project.org/web/packages/ggmap/index.html}
+This funtion is base on \code{\link{ggmap}}. It is a fast way to plot a density map, actually it can work with any SpatialPointsDataFrame. To customize your output, more information is available in the \code{\link{ggmap}} documentation page \url{https://cran.r-project.org/package=ggmap}
 }
 
 
