@@ -1,5 +1,3 @@
-#' @param path a character vector. see ?list.files()
-#' @param pattern an optional regular expression, i.e. to limit possible file extensions. see ?list.files()
 #' @export
 #' @import streamR rgdal RSQLite
 
