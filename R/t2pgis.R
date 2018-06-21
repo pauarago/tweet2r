@@ -1,23 +1,22 @@
+#' @param path a character vector. see ?list.files()
+#' @param pattern an optional regular expression, i.e. to limit possible file extensions. see ?list.files()
 #' @export
 #' @import RPostgreSQL rgdal
 
-t2pgis<-function(fileprefix, con){
+t2pgis <- function(fileprefix, con, path = ".", pattern = ".json$"){
   #loading required packagies
-#    library(RPostgreSQL)
-#    library(rgdal)
+  #    library(RPostgreSQL)
+  #    library(rgdal)
   
   #list all the files of the folder and get the total number of files
-  files <- list.files(pattern = ".json")
-  num_files<-length(files)
-
+  files <- list.files(path, pattern, full.names = TRUE)
+  files <- files[grep(fileprefix, basename(files))]
   
   #--------parse tweets using a loop and populatae the database table--------------#
-  for(i in 1:num_files) { 
+  for(filename in files) { 
     
     # ------1) parse the JSON files
-    #get the files names
-    filename=paste(fileprefix,i-1,".json", sep="")
-    
+    #parse tweets and create a data frame
     tweets <- parseTweets(filename, simplify = FALSE, verbose = TRUE)
     
     #remove bad character before import it to postgres

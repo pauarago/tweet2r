@@ -3,11 +3,11 @@
 #' @export
 #' @import streamR rgdal RSQLite
 
-t2sqlite<-function(fileprefix, import=TRUE, path = ".", pattern = ".json$"){
+t2sqlite <- function(fileprefix, import=TRUE, path = ".", pattern = ".json$"){
   
   #list all the files of the folder and get the total number of files
   files <- list.files(path, pattern, full.names = TRUE)
-  files[grep(fileprefix, files)]
+  files <- files[grep(fileprefix, basename(files))]
   
   #opena database connection
   con <- dbConnect(SQLite(), fileprefix)
