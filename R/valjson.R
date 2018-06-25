@@ -24,14 +24,6 @@ valjson <- function(fileprefix, path = ".", pattern = ".json$"){
       #remove file with no tweets
       file.remove(filename)
     }
-    else{
-      file_num=counter-del_files
-      #rename_file
-      file.rename(from = filename,
-                  to = paste0(path, "/", fileprefix, file_num, ".json"))
-      #update counter
-      counter=counter+1
-    }
   } 
   
   return (paste("Number of files deleted:",del_files, sep=" "))
