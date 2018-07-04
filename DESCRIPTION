@@ -23,7 +23,7 @@ Imports:
     splancs,
     maptools
 Maintainer: Pau Aragó <parago@uji.es>
-License: GPL-3
+License: GPL-3 | file LICENSE
 Encoding: UTF-8
 RoxygenNote: 5.0.1
 NeedsCompilation: no

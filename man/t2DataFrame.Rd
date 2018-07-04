@@ -8,11 +8,19 @@
 A function to parse JSON files containing tweets stroed using the function \code{\link{tweet2r}}. Tweets are stored as a data.frame ready to be use within R.
 }
 \usage{
-t2DataFrame(fileprefix)
+t2DataFrame(fileprefix, path = ".", pattern = ".json$")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{fileprefix}{File prefix for JSON files where tweets has been stored after harvesting. If tweets have been retrieved with the \code{\link{tweet2r}} function it should be the same fileprefix name.}
+  
+  \item{path}{
+  A character vector to folder. see ?list.files()
+  }
+  
+  \item{pattern}{
+  Limits possible file extensions, optional as regular expression. see ?list.files()
+  }
 }
 
 

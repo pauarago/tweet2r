@@ -6,7 +6,7 @@
 Export Json files retrieved with \code{\link{tweet2r}} to a Sqlite database and import tweets as a Data Frame.
 }
 \usage{
-t2sqlite(fileprefix, import)
+t2sqlite(fileprefix, import, path = ".", pattern = ".json$")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -16,6 +16,14 @@ Setup file prefix for JSON files. If tweets have been retrieved with the \code{\
 
   \item{import}{
 TRUE to import the tweets stored in the Sqlite database to R. It can be imported as a data frame with all the tweets retrieved with the function \code{\link{tweet2r}}. FALSE to not import as Data Frame
+  }
+  
+  \item{path}{
+  A character vector to folder. see ?list.files()
+  }
+  
+  \item{pattern}{
+  Limits possible file extensions, optional as regular expression. see ?list.files()
   }
 }
   

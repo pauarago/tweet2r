@@ -1,20 +1,17 @@
 #' @export
 #' @import streamR
 
-t2DataFrame<-function(fileprefix){
+t2DataFrame <- function(fileprefix, path = ".", pattern = ".json$"){
   
   #list all the files of the folder and get the total number of files
-  files <- list.files(pattern = ".json")
-  num_files<-length(files)
+  files <- list.files(path, pattern, full.names = TRUE)
+  files <- files[grep(fileprefix, basename(files))]
   
   #--------parse tweets using a loop to append next files to database table--------------#
   tweets=NULL
-  for(i in 1:num_files) { 
+  for(filename in files) { 
     
     # ------1) parse the JSON files
-    #get the files names
-    filename=paste(fileprefix,i-1,".json", sep="")
-    
     #parse tweets and create a data frame
     tweetsjson <- parseTweets(filename, simplify = FALSE, verbose = TRUE)
     
