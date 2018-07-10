@@ -13,8 +13,8 @@ tspan(geotweets,bw, cont, acontour)
 
 \arguments{
   \item{geotweets}{Geotagged tweets as a SpatialPointsDataFrame or a SpatialPointsDataFrame.}
-  \item{bw}{Bandwith for Kernel Smoothed Intensity. Note that if you are using directly geotweets comming from \code{\link{tweet2r}} and \code{\link{t2SpatialPointDataFrame}} units are degrees.}
-  \item{cont}{FALSE by default, geotweets bounding box provide the countour. If TRUE a countour must be provaided}
+  \item{bw}{Bandwith for Kernel Smoothed Intensity. Note that if you are using directly geotweets coming from \code{\link{tweet2r}} and \code{\link{t2SpatialPointDataFrame}} units are degrees.}
+  \item{cont}{FALSE by default, geotweets bounding box provide the contour. If TRUE a contour must be provided}
   \item{acontour}{Optional. A Spatial object with a defined bbox.}
 }
 \details{
@@ -22,7 +22,7 @@ In order to do a wider point pattern analysis is better to use directly the \cod
 }
 \value{
 
-  \item{tweetspphp}{Simpliest Object of class"ppp"representing a point pattern dataset in the two-dimensional plane with no marks, (\code{\link{ppp}})}
+  \item{tweetspphp}{Simpliest Object of class "ppp" representing a point pattern dataset in the two-dimensional plane with no marks, (\code{\link{ppp}})}
   \item{hp}{Homogeneous Poisson fitted point process model to an observed point pattern (\code{\link{ppm}}).}
   \item{ihp}{Inhomogeneous Poisson fitted point process model to an observed point pattern (\code{\link{ppm}}).}
   \item{int}{Computed kernel smoothed intensity function from a point pattern. (\code{\link{density.ppp}}).}

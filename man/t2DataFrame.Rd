@@ -5,7 +5,7 @@
 %%  ~~function to do ... ~~
 }
 \description{
-A function to parse JSON files containing tweets stroed using the function \code{\link{tweet2r}}. Tweets are stored as a data.frame ready to be use within R.
+A function to parse JSON files containing tweets stored using the function \code{\link{tweet2r}}. Tweets are stored as a data.frame ready to be use within R.
 }
 \usage{
 t2DataFrame(fileprefix, path = ".", pattern = ".json$")

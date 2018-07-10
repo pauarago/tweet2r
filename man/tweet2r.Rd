@@ -21,7 +21,7 @@
 
    \item{bbox}{Vector with the bounding box coordinates from which you want to retrieve tweets. You will retrieve geotagged tweets as well as tweets from users that has in his profile this area as a residence \url{https://dev.twitter.com/streaming/overview/request-parameters}}
 
- \item{fileprefix}{Filprefix for the JSON file where the tweets will be stored. Avoid number at the begging this will be confusing for SQL database}
+ \item{fileprefix}{Fileprefix for the JSON file where the tweets will be stored. Avoid number at the begging this will be confusing for SQL database}
  \item{consumerKey}{Twitter API consumer key \url{https://dev.twitter.com/oauth}}
  \item{consumerSecret}{Twitter API consumer secret \url{https://dev.twitter.com/oauth}}
  \item{requestURL}{Twitter API url to request data \url{https://dev.twitter.com}}

@@ -1,7 +1,7 @@
 \name{t2gis}
 \alias{t2gis}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{Export Tweeter with geotagg in Sqlite table to KML, shapefiles or GML}
+\title{Export Tweeter with geotag in Sqlite table to KML, shapefiles or GML}
 \description{
 This functions import geotagged tweets as SpatialPointDataFrame from a Sqlite database containing the tweets and export it in a GIS format
 }
