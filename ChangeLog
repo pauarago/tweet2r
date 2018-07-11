@@ -24,3 +24,10 @@
 	* src/t2SpatialPointDataFrame: new function
 	* src/t2DataFrame: new function
 	* src/t2subset: new function
+
+2018-07-10 15:00 jeroen
+
+  *R/t2DataFrame: added some arguments
+  *R/t2qgis: added some arguments
+  *R/t2sqlite: added some arguments
+  *R/valjson: added some arguments
