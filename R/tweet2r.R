@@ -79,17 +79,17 @@ tweet2r<-function(t_start,t_end, ntweets=NULL,keywords=NULL, bbox=NULL, filepref
   t_start<-strptime(paste(t_start,"CET"),"%Y-%m-%d %H:%M:%S")
   
   #define end time for the loop
-  t_end<-as.list(strptime(paste(t_end,"CET"),"%Y-%m-%d %H:%M:%S"))
+  t_end<-strptime(paste(t_end,"CET"),"%Y-%m-%d %H:%M:%S")
   
   
   #get current time as a list
-  current<-as.list(Sys.time())
+  current<-Sys.time()
   
   #-----------keep system waiting until the start time--------
   
   #keep waiting until the start time
   while (current<t_start){
-    current<-as.list(Sys.time())
+    current<-Sys.time()
   }
   
   #print the start time
@@ -117,7 +117,7 @@ tweet2r<-function(t_start,t_end, ntweets=NULL,keywords=NULL, bbox=NULL, filepref
       filterStream( file.name=b,
                     locations=bbox, 
                     tweets=ntweets , oauth=my_oauth )
-      current<-as.list(Sys.time())
+      current<-Sys.time()
       #update the counter
       x<- x+1;
     }
@@ -141,7 +141,7 @@ tweet2r<-function(t_start,t_end, ntweets=NULL,keywords=NULL, bbox=NULL, filepref
       filterStream( file.name=k,
                     track=keywords, 
                     tweets=ntweets , oauth=my_oauth )
-      current<-as.list(Sys.time())
+      current<-Sys.time()
       #update the counter
       x<- x+1;
     }
