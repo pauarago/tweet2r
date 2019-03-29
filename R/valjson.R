@@ -1,6 +1,6 @@
 #' @export
 
-valjson <- function(fileprefix, path = ".", pattern = ".json$"){
+valjson <- function(fileprefix, path = ".", pattern = ".json$", fsize=7){
   
   #list all the files of the folder and get the total number of files
   files <- list.files(path, pattern, full.names = TRUE)
@@ -16,8 +16,8 @@ valjson <- function(fileprefix, path = ".", pattern = ".json$"){
     #get the file size
     file.info(filename)$size
     
-    #delete the file if it has no tweets (size<1024 kb)
-    if(file.info(filename)$size<1024){
+    #delete the file if it has no tweets (size<fsize*1024 k)
+    if(file.info(filename)$size<fsize*1024){
       #update counter
       counter=counter+1
       del_files=del_files+1
